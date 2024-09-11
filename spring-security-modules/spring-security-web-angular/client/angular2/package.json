@@ -6,7 +6,9 @@
     "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
     "lite": "lite-server",
     "tsc": "tsc",
-    "tsc:w": "tsc -w"
+    "tsc:w": "tsc -w",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "license": "ISC",
   "dependencies": {
@@ -26,12 +28,14 @@
     "reflect-metadata": "^0.1.8",
     "rxjs": "5.0.3",
     "systemjs": "0.20.0",
-    "zone.js": "0.7.6"
+    "zone.js": "0.7.6",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "concurrently": "3.1.0",
     "lite-server": "^2.2.0",
     "typescript": "2.1.5"
   },
-  "repository": {}
+  "repository": {},
+  "snyk": true
 }
